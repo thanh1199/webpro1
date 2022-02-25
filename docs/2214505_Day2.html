@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../themify-icons/themify-icons.css">
+    <title>第２回</title>
+</head>
+<body>
+    <a id="top-menu" href="../2214505.html" style="position: fixed; z-index: 100; top: 10px; right: 10px; width: fit-content; background-color: rgba(255, 255, 255, 0.3); color: rgba(0, 0, 0, 0.6); font-size: 20px; font-weight: bold; text-align: center; padding: 10px; text-decoration: none;">My Menu</a>
+    <div id="title">第２回：入力フォーム作成１</div>
+    <div id="main">
+        <div id="header"><strong>XiVi </strong><p>Your HOME, Our PROUD !</p></div>
+        <form action="">
+            <div>
+                <label for="">Name</label>
+                <br>
+                <input class="long-input" type="text" placeholder="Thanh123" required>
+            </div>
+            <div>
+                <label for="">E-mail</label>
+                <br>
+                <input class="long-input" type="email" placeholder="quocthanh123@xxx.xxx" required>
+            </div>
+            <div>
+                <label for="">Password</label>
+                <br>
+                <input class="long-input" type="password" placeholder="6 charaters over" required>
+            </div>
+            <div>
+                <label for="">Reinput password</label>
+                <br>
+                <input class="long-input" type="password" required>
+            </div>
+            <div id="more">
+                <input type="checkbox" required><label for="">I read <a href="">XiVi's security policy</a> and degreed with <a href="#">XiVi's social comunity rules</a>.</label><br>
+                <input type="checkbox" required><label for="">Send me the latest news about sale or trending designs.</label>
+            </div>
+            <div style="text-align: right;">
+                <i class="ti-help"></i>
+                <label for=""><a href="">How dose XiVi use my private information ?</a></label>
+            </div>
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+</body>
+    <div id="other-contact">
+        <a href=""><i class="ti-facebook"></i></a>
+        <a href=""><i class="ti-skype"></i></a>
+        <a href=""><i class="ti-instagram"></i></a>
+        <a href=""><i class="ti-twitter"></i></a>
+        <a href=""><i class="ti-youtube"></i></a>
+    </div>
+    <div id="footer">Designed by N.Q.Thanh</div>
+<style>
+    body {
+        min-height: 100vh;
+        height: fit-content;
+        background-image: linear-gradient(rgba(0, 248, 153, 0.1), rgb(0, 153, 94));
+    }
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 18px;
+    }
+    #title {
+        background-color: rgb(0, 209, 146);
+        padding: 20px;
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+    }
+    #main {
+        margin: 20px 10%;
+    }
+    #header {
+        margin: 60px auto;
+        text-align: right;
+    }
+    #header strong {
+        color: rgb(0, 170, 99);
+        font-size: 60px;
+        letter-spacing: 8px;
+    }
+    #header p {
+        margin: 10px -20px 0;
+        letter-spacing: 5px;
+        color: rgb(0, 51, 34);
+        font-size: 16px;
+        font-weight: bold;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        min-height: calc(100vh - 180px);
+        margin-bottom: 50px;
+        border-top: 15px solid rgb(0, 175, 93);
+        border-radius: 5px 5px 0 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 0 20px;
+    }
+    form > div {
+        margin-top: 20px;
+    }
+    label {
+        padding: 10px;
+        line-height: 30px;
+    }
+    #other-contact {
+        margin: 5px auto;
+        width: fit-content;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    #other-contact i {
+        margin: 0 5px;
+    }
+    .long-input {
+        border: solid 2px rgb(0, 175, 93);
+        border-radius: 5px;
+        max-width: 80%;
+        width: 600px;
+        padding: 5px 10px;
+        font-size: 18px;
+        margin: 8px 0 0 10%;
+    }
+    #more {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: solid 2px rgba(0, 180, 111, 0.1);
+
+    }
+    button {
+        background-color: rgb(0, 170, 99);
+        color: white;
+        font-weight: bold;
+        line-height: 30px;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        width: 300px;
+        max-width: 100%;
+        margin: 50px auto;
+    }
+    button:hover {
+        background-color: rgb(0, 224, 112);
+    }
+    i {
+        border: solid 1px black;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    a {
+        text-decoration: none;
+        font-size: 16px; 
+        color: rgb(100, 100, 100);
+    }
+    a > i {
+        background-color: white;
+        border: none;
+        font-size: 20px;
+    }
+    a:hover {
+        color: black;
+    }
+    #footer {
+        margin-top: 20px;
+        background-color: black;
+        color: white;
+        font-size: 14px;
+        text-align: right;
+        padding: 5px;
+        cursor: pointer;
+    }
+</style>
+</html>

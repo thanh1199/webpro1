@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第１回</title>
+</head>
+<body>
+    <div id="main">
+        <a id="top-menu" href="../2214505.html" style="position: fixed; z-index: 100; top: 10px; left: 10px; width: fit-content; background-color: rgba(255, 255, 255, 0.3); color: rgba(0, 0, 0, 0.6); font-size: 20px; font-weight: bold; text-align: center; padding: 10px; text-decoration: none;">My Menu</a>
+        <h1><div>第１回：</div><div>HTMLの基本入門</div></h1>
+        
+        <h4>Excercise</h4>
+        <div class="unit-content">
+            <h5>Webサーバとは何に？</h5><br>
+            <p>単純に言えば乗り物のごとしである。WEBサーバーとは、訪問者の要求に応じてホームページのデータを訪問者のWebブラウザーに送るサーバーのことを言います。</p>
+        </div>
+        <div class="unit-content">
+            <h5>Webサーバの役割？</h5><br>
+            <p>Webサーバーは、HTML文書や画像などのデータをブラウザーへ送り、ブラウザーがHTMLを解釈してホームページデータを表示します。Webブラウザーとは、Google ChromeやInternet Explorer、Safari、Firefoxなど、パソコンやスマートフォンでインターネットを使用する際に使うソフトのことです。ホームページなどを見る際には、WebサーバーとWebブラウザーが必要です。ホームページなどを提供する側はセキュリティ対策など施したうえで、Webサーバーの準備が必要です。</p>
+        </div>
+        <div class="unit-content">
+            <h5>Webサーバの種類？</h5><br>
+            <li>Webサイトやページの表示をサービスするものをWebサーバーと言います</li>
+            <li>メールの送受信データのサービスを提供するものをメールサーバーと言います。</li>
+            <li>データの参照、更新などのサービスを提供するものをデータベースサーバーと言います。</li>
+            <li>ファイルの共有などのサービスを提供するものをファイルサーバーと言います。</li>
+            <li>アプリケーションサービスを提供するものをアプリケーションサーバーと言います。</li>
+            <li>アカウント管理サービスを提供するものをアカウント管理サーバーと言います。</li>
+            <li>ホスト名やIPアドレスの変換などを提供するものをDNSサーバーとも言います。</li>
+            <p>よく使われているWebサーバアプリ： IIS, Apache, Google Web Server, nignx</p>
+        </div>
+        <div class="unit-content">Word file:　<a href="./2214505_Day1.docx">Day1.docx</a></div>
+    </div>
+    <div id="sign"><div>参考情報：<a href="https://minto.tech/web-server/">Webサーバーって何？Webサーバーの種類と特徴、選び方</a></div> Designed by N.Q.Thanh</div>
+    <style>
+        body {
+            background-image: linear-gradient(45deg, rgb(118, 162, 255), rgb(215, 228, 255) 30%, rgb(45, 112, 255) 45%, rgb(215, 228, 255) 92%, rgb(118, 162, 255) 90%, white) 
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;   
+        }
+        #main {
+            margin: 0 5%;
+        }
+        .unit-content {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            margin: 20px 0;
+            box-shadow: 0 0 20px rgb(158, 189, 255);
+            line-height: 30px;
+            color: #202020
+        }
+        h4 {
+            width: 40%;
+            padding: 10px;
+            background-image: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+            letter-spacing: 5px;
+            border-bottom-left-radius: 10px;
+            color: rgb(70, 70, 70)
+        }
+        h1 {
+            padding: 25px 0;
+            min-height: 100px;
+            text-align: center;
+            color: rgb(0, 40, 128);
+        }
+        h1::after {
+            content: "10月4日";
+            font-size: 18px;
+            text-align: right;
+            letter-spacing: 5px;
+            display: block;
+            height: 2px;
+            width: 30%;
+            margin-left: 50%;
+            background-color: rgb(0,40,128);
+        }
+        h1>div {
+            display: inline-block;
+        }
+        h5 {
+            display: inline-block;
+            letter-spacing: 5px;
+            padding: 5px;
+            width: fit-content;
+        }
+        h5::before {
+            display: inline-block;
+            margin-right: 5px;
+            content: "";
+            width: 10px;
+            height: 20px;
+            background-color: rgb(0, 37, 117);
+        }
+        #sign {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            font-size: 15px;
+            color: white;
+            background-color: rgb(0, 10, 104);
+            text-align: right;
+        }
+        #sign a {
+            color: white;
+            font-size: 12px;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第３回</title>
+</head>
+<body>
+    <a id="top-menu" href="../2214505.html" style="position: fixed; z-index: 100; top: 10px; right: 10px; width: fit-content; background-color: rgba(255, 255, 255, 0.3); color: rgba(0, 0, 0, 0.6); font-size: 20px; font-weight: bold; text-align: center; padding: 10px; text-decoration: none;">My Menu</a>
+    <div id="main">
+        <div id="title">第３回：入力フォーム作成２</div>
+        <div id="content">
+            <div id="contact">
+                <div>C</div>
+                <div>O</div>
+                <div>N</div>
+                <div>T</div>
+                <div>A</div>
+                <div>C</div>
+                <div>T</div>
+            </div>
+            <div id="slogan">気軽に私たちと連絡しようぉ~！</div>
+            <form action="./2214505_Day3.php" method="post"　id="form">
+                <label for="" class="unit">お名前*</label>
+                <input type="text" name ="name" required> 
+                <div class="unit">生年月日*</div>
+                <div class="inline">
+                    <input type="date" name="birthday" required>
+                    <div>
+                        <input type="radio" name="gender" id="male" value="男" required>
+                        <label for="male">男</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" id="female" value="女" required>
+                        <label for="female">女</label>
+                    </div>
+                </div>
+                <label for="company-name" class="unit">職業ー会社名</label>
+                <input type="text" name="company-name">
+                <label for="tel-number" class="unit">電話番号*</label>
+                <input type="tel" required name="tel-number">
+                <label for="email" class="unit">E-mail*</label>
+                <input type="email" name="email" required>
+                <div class="unit">連絡できる時間</div>
+                <div class="inline">
+                    <input type="date" name="requestable-date">
+                    <select class="am-pm" name="requestable-time">
+                        <option value="none"></option>
+                        <option value="am">午前</option>
+                        <option value="pm">午後</option>
+                    </select>
+                </div>
+                <div class="unit">お問い合わせ内容*</div>
+                <textarea class="input" rows="5" cols="40" name="content"></textarea>
+                <div class="unit">私達の製品をどう思いますか？</div>
+                <div class="inline">
+                    <input type="checkbox" name="rating[]" value="good-design">
+                    <label for="">デザインがきれい</label>
+                </div>
+                <div class="inline">
+                    <input type="checkbox" name="rating[]" value="good-performance">
+                    <label for="">性能のいい</label>
+                </div>
+                <div class="inline">
+                    <input type="checkbox" name="rating[]" value="not-bad">
+                    <label for="">普通</label>
+                </div>
+                <div class="inline">
+                    <input type="checkbox" name="rating[]" value="worth-introducing">
+                    <label for="">友達と紹介する</label>
+                </div>
+                <button type="submit">送信</button>
+            </form>
+        </div>
+    </div>
+    <div id="sign">Design by N.Q.Thanh</div>
+</body>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: rgb(255, 238, 238);
+    }
+    #title {
+        padding: 10px 30px;
+        background-color: rgb(255, 206, 214);
+        font-weight: bold;
+        font-size: 22px;
+        color: white;
+        text-shadow: 0 0 4px rgb(255, 102, 102);
+    }
+    #content {
+        margin: 20px 5%;
+        padding: 10px;
+        background-color: white;
+        box-shadow: 0 0 20px rgb(224, 224, 224);
+    }
+    #contact {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        font-weight: bold;
+        font-size: 25px;
+        margin: 10px auto;
+        max-width: 300px;
+        box-shadow: 1px 1px 1px black;
+    }
+    #contact>div {
+        margin-top: auto;
+    }
+    #contact>div:first-child, 
+    #contact>div:nth-child(7) {
+        font-size: 36px;
+        color: rgb(255, 21, 138);
+    }
+    #slogan {
+        font-size: 12px;
+        text-align: right;
+        color: rgb(104, 104, 104);
+        letter-spacing: 5px;
+        padding-right: 15%;
+    }
+    #sign {
+        background-color: black;
+        color: white;
+        padding: 2px 10px;
+        text-align: right;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        justify-content: space-between;
+    }
+    form>label, form>div {
+        margin: 20px 0 5px 0;
+    }
+    .inline {
+        display: flex;
+        margin-top: 10px;
+    }
+    input, textarea, button, select{
+        line-height: 33px;
+        font-size: 16px;
+        border: solid 2px rgb(219, 130, 141);
+        border-radius: 5px;
+        padding: 3px 10px;
+        background-color: white;
+        margin: 0 5px;
+    }
+    button {
+        margin: 20px auto 0;
+        background-color: rgb(255, 217, 223);
+        width: 50%;
+        max-width: 500px;
+        border: solid 2px black;
+        letter-spacing: 10px;
+    }
+    button:hover {
+        background-color: rgb(255, 21, 138);
+    }
+    .unit {
+        border-left: 5px solid rgb(255, 21, 138);
+        padding-left: 5px;
+    }
+</style>
+</html>

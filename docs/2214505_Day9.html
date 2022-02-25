@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第９回</title>
+</head>
+<body>
+    <a id="top-menu" href="../2214505.html" style="position: fixed; z-index: 100; top: 10px; left: 10px; width: fit-content; background-color: rgba(255, 255, 255, 0.3); color: rgba(0, 0, 0, 0.6); font-size: 20px; font-weight: bold; text-align: center; padding: 10px; text-decoration: none;">My Menu</a>
+    <div id="main">
+        <div style="position: absolute; z-index: 1; top: 3vh; width: 100%;">
+            <div id="title">第９回：乱数</div>
+            <form action="./Day9.php" method="post">
+                <div id="game-name">じゃんけんぽん</div>
+                <div id="condition">
+                    <span>
+                        <input type="radio" name="condition" id="condition1" value="auto-win" required>
+                        <label for="condition1">Auto Win</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="condition" id="condition3" value="random" checked required>
+                        <label for="condition3">Random</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="condition" id="condition2" value="auto-lose" required>
+                        <label for="condition2">Auto Lose</label>
+                    </span>
+                </div>
+                <div id="option">
+                    <span>
+                        <input type="radio" name="option" id="option1" value="../img/2214505_janken1.png" required>
+                        <label for="option1">
+                            <img src="../img/2214505_janken1.png" alt="rock">
+                        </label>
+                    </span>
+                    <span>
+                        <input type="radio" name="option" id="option2" value="../img/2214505_janken2.png" required>
+                        <label for="option2">
+                            <img src="../img/2214505_janken2.png" alt="scissors">
+                        </label>
+                    </span>
+                    <span>
+                        <input type="radio" name="option" id="option3" value="../img/2214505_janken3.png" required>
+                        <label for="option3">
+                            <img src="../img/2214505_janken3.png" alt="leaf">
+                        </label>
+                    </span>
+                </div>
+                <button type="submit">決める</button>
+            </form>
+            <div id="deccorate"><span>じゃん</span><span>けん</span><span>ぽん</span></div>
+        </div>
+    </div>
+    <div id="footer">
+        Designed by N.Q.Thanh
+    </div>
+</body>
+<style>
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    background-image: linear-gradient( 60deg, rgb(253, 255, 143), rgb(248, 193, 255));
+    width: 100vw;
+    height: calc(100vh - 25px);
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#main::before{
+    content: "";
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    z-index: 0;
+    background-color: rgba(255, 117, 237, 0.7);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px rgba(255, 117, 237, 0.2), 
+    0 0 40px 70px rgba(255, 117, 237, 0.4), 
+    0 0 100px 200px rgba(255, 117, 237, 0.3);
+}
+#main::after{
+    content: "";
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    bottom: 20%;
+    right: 20%;
+    z-index: 0;
+    background-color: rgb(255, 251, 0);
+    border-radius: 50%;
+    box-shadow: 0 0 5px 3px rgba(255, 251, 32, 0.8), 
+    0 0 10px 15px rgba(255, 251, 32, 0.7),
+    0 0 100px 200px rgba(255, 251, 32, 0.6);
+}
+#title {
+    text-align: right;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 24px;
+}
+form {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+#game-name {
+    font-size: 30px;
+    text-align: center;
+}
+input {
+    display: none;
+}
+#condition, #option {
+    display: flex;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px 5vw;
+    padding: 10px 5px;
+    border: solid 1px rgb(0, 0, 0);
+}
+#option {
+    border: none;
+}
+label {
+    padding: 10px;
+    transition: ease 0.5s;
+}
+#condition input:checked + label {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+img {
+    height: 90px;
+    padding: 20px;
+    border-radius: 20%;
+    transition: ease 0.2s;
+}
+#option input:checked + label > img {
+    background-color: rgb(255, 255, 255);
+    height: 120px;
+}
+button {
+    display: block;
+    color: white;
+    padding: 10px;
+    background-color: black;
+    border: none;
+    margin-top: 50px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: ease 0.3s;
+}
+button:hover {
+    background-color: rgb(187, 0, 0);
+    cursor: pointer;
+}
+#deccorate {
+    margin: 20px auto;
+    width: fit-content;
+}
+#deccorate span {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+}
+#deccorate > span:nth-child(1) {
+    transform: rotate(20deg);
+}
+#deccorate > span:nth-child(2) {
+    transform: rotate(-10deg);
+}
+#footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 15px;
+    padding: 5px 20px;
+    text-align: right;
+}
+</style>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第５回</title>
+</head>
+<body>
+    <a id="top-menu" href="../2214505.html" style="position: fixed; z-index: 100; top: 10px; right: 10px; width: fit-content; background-color: rgba(255, 255, 255, 0.3); color: rgba(0, 0, 0, 0.6); font-size: 20px; font-weight: bold; text-align: center; padding: 10px; text-decoration: none;">My Menu</a>
+    <h1 id="lesson">第５回： PHPの配列　練習</h1>
+    <h2 id="title">
+        成績登録
+    </h2>
+    <form action="./2214505_Day5.php" method="post">
+        <div id="student">
+            <span>学籍</span>
+            <div id="wrapper"><input type="number" name="number" required></div>
+            <br>
+            <span>名前</span>
+            <div id="wrapper"><input type="text" name="name" required></div>
+        </div>
+        <table id="input-score">
+            <col width="20%">
+            <col width="20%">
+            <col>
+            <tr>
+                <th>科目名</th>
+                <th>点数</th>
+                <th>コメント</th>
+            </tr>
+            <tr>
+                <td>数学</td>
+                <td><input type="number" name="score[]" required></td>
+                <td><input type="text" name="comment[]"></td>
+            </tr>
+            <tr>
+                <td>物理</td>
+                <td><input type="number" name="score[]" required></td>
+                <td><input type="text" name="comment[]"></td>
+            </tr>
+            <tr>
+                <td>科学</td>
+                <td><input type="number" name="score[]" required></td>
+                <td><input type="text" name="comment[]"></td>
+            </tr>
+            <tr>
+                <td>生物</td>
+                <td><input type="number" name="score[]" required></td>
+                <td><input type="text" name="comment[]"></td>
+            </tr>
+            <tr>
+                <td>文学</td>
+                <td><input type="number" name="score[]" required></td>
+                <td><input type="text" name="comment[]"></td>
+            </tr>
+            <tr>
+                <td>歴史</td>
+                <td><input type="number" name="score[]" required></td>
+                <td><input type="text" name="comment[]"></td>
+            </tr>
+            <tr>
+                <td>地理</td>
+                <td><input type="number" name="score[]" required></td>
+                <td><input type="text" name="comment[]"></td>
+            </tr>
+            <tr>
+                <td>英語</td>
+                <td><input type="number" name="score[]" required></td>
+                <td><input type="text" name="comment[]"></td>
+            </tr>
+            <tr>
+                <td>情報</td>
+                <td><input type="number" name="score[]" required></td>
+                <td><input type="text" name="comment[]"></td>
+            </tr>
+            <tr>
+                <td>体育</td>
+                <td><input type="number" name="score[]" required></td>
+                <td><input type="text" name="comment[]"></td>
+            </tr>
+        </table>
+        <button type="submit">登録</button>
+    </form>
+    
+    <div id="slogan">
+        <div><span>now</span>doing decides in<span>future</span>what you are... BUT</div>
+        <div><span>"</span>the scores are not Everythings !</div>
+    </div>
+    <div id="footer">
+        Designed by N.Q.Thanh
+    </div>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: black;
+        color: white;
+    }
+    #lesson {
+        width: fit-content;
+        background-image: linear-gradient(45deg, rgb(0, 238, 255) 10%, rgb(0, 255, 85) 75%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding: 20px 30px;
+    }
+    #title {
+        text-align: center;
+        margin: 30px;
+        color: rgb(0, 238, 255);
+        font-size: 40px;
+    }
+    span {
+        width: fit-content;
+        display: inline-block;
+        padding: 10px;
+        width: 20vw;
+        letter-spacing: 2px;
+        font-size: 18px;
+    }
+    #student {
+        margin: 10%;
+    }
+    #wrapper{
+        height: 34px;
+        width: 60%;
+        display: inline-block;
+        padding: 2px;
+        background-image: linear-gradient(45deg, rgb(0, 238, 255) 10%, rgb(0, 255, 85) 75%);
+    }
+    input {
+        height: 30px;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        outline: none;
+        color: white;
+        font-size: 16px;
+        border-color: rgba(255, 255, 255, 0);
+        padding: 5px;
+    }
+    #input-score {
+        width: 90%;
+        margin: 5%;
+        background-image: linear-gradient(45deg, rgb(0, 238, 255) 10%, rgb(0, 255, 85) 75%);
+    }
+    th, td {
+        background-color: black;
+        padding: 10px;
+        margin: 5px;
+        background-clip: padding-box;
+        font-size: 20px;
+        text-align: center;
+    }
+    td {
+        font-size: 18px;
+    }
+    #slogan {
+        width: 100%;
+        letter-spacing: 3px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #slogan span {
+        width: fit-content;
+        display: inline-block;
+        font-size: 40px;
+        margin: 20px;
+        letter-spacing: 5px;
+    }
+    #slogan>div:nth-child(1)>span:nth-child(1) {
+        color: rgb(0, 238, 255);
+    }
+    #slogan>div:nth-child(1)>span:nth-child(2) {
+        color: rgb(0, 255, 85);
+    }
+    #slogan>div:nth-child(2) {
+        font-size: 30px;
+        font-weight: bold;
+        background-image: linear-gradient(45deg, rgb(0, 238, 255) 10%, rgb(0, 255, 85) 75%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    button{
+        width: 30%;
+        padding: 10px;
+        font-size: 18px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        outline: none;
+        background-color: rgb(0, 238, 255);
+        border: black;
+        letter-spacing: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: rgb(0, 255, 85);
+    }
+    #footer {
+        text-align: right;
+        background-color: white;
+        color: black;
+        padding: 5px;
+    }
+</style>
+</html>

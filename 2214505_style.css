@@ -1,0 +1,148 @@
+
+    *{
+        padding: 5px; 
+        margin: 0; 
+        box-sizing: border-box; 
+        font-family: 'Playfair Display', serif;
+    }
+    #menu {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        /* grid-template-columns: repeat(3, 1fr);
+        fr unit is automatic divide to number of children */
+        
+        /* display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around; */
+    }
+    span {
+        background-image: linear-gradient(45deg, rgb(0, 106, 138), rgb(25, 194, 255));
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        clip-path: polygon(
+            50% 2%,
+            5% 20%,
+            0 80%,
+            90% 100%,
+            100% 95%,
+            100% 10%
+        );
+    }
+    a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+    a:hover {
+        opacity: 0.65;
+    }
+    .unit {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        line-height: 30px;
+        min-height: 122px;
+        color: white;
+        transition: ease 0.5s;
+        text-align: center;
+    }
+    #one {
+        background-color: rgb(0, 75, 187);
+    }
+    #two {
+        background-color: rgb(0, 161, 13);
+    }
+    #three {
+        background-color: rgb(182, 0, 85);
+    }
+    #four {
+        background-color: rgb(0, 180, 126);
+    }
+    #five {
+        background-image: linear-gradient(to right bottom, rgb(0, 187, 201) 10%, rgb(0, 201, 67) 75%);
+    }
+    #seven {
+        background-image: linear-gradient(to left, rgb(57, 0, 214) 10%, rgb(195, 0, 212) 75%);
+    }
+    #eight {
+        background-image: linear-gradient(to right, rgb(228, 121, 0), rgb(219, 205, 0));
+    }
+    #nine {
+        background-image: linear-gradient(to left bottom, rgb(255, 32, 225), rgb(255, 243, 79));
+    }
+    #ten {
+        background-image: url(./img/2214505_background-3.jpg);
+    }
+    .image-background {
+        background-size: cover;
+        position: relative;
+    }
+    .image-background > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .image-background::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 0;
+        transition: ease 0.3s;
+    }
+    .image-background::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        background-image: inherit;
+        z-index: 0;
+        opacity: 0.3;
+        transition: ease 0.3s;
+    }
+    .image-background:hover::after {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .image-background:hover::before {
+        transform: translateX(-10%) translateY(-10%);
+        width: 120%;
+        height: 120%;
+    }
+    .simple:hover {
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+    .neon {
+        position: relative;
+        z-index: 1;
+    }
+    .neon::before {
+        content:"";
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        position: absolute;
+        background-image: inherit;
+        filter: blur(2px);
+        opacity: 0;
+        bottom: -10%;
+        left: -5%;
+        z-index: -1;
+        transition: ease 0.5s;
+    }
+    .neon:hover:before {
+        opacity: 0.5;
+    }
+    #sign {
+        text-align: right;
+        color: white;
+    }
